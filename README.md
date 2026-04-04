@@ -15,3 +15,7 @@ This project analyzes monthly sales data using Python and NumPy.
 
 ## Run
 python main.py
+
+## Output Screenshot
+
+![Output](output.png)
