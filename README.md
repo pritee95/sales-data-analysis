@@ -18,4 +18,4 @@ python main.py
 
 ## Output Screenshot
 
-![Output](output.png)
+![Output](Output.png)
