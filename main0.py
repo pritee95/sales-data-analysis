@@ -1,27 +1,23 @@
 import numpy as np
 
-marks = np.array([
-    [78, 85, 90],   # Student 1
-    [60, 70, 65],   # Student 2
-    [88, 92, 95],   # Student 3
-    [45, 50, 40],   # Student 4
-    [70, 75, 80]    # Student 5
-])
+# Sales data
+sales = np.array([4000, 6000, 4500, 8000, 9000, 7500])
 
-subjects = ["Math", "Science", "English"]
+# Months
+months = np.array(["Jan", "Feb", "Mar", "Apr", "May", "Jun"])
 
-# Student average
-student_avg = np.mean(marks, axis=1)
-print(student_avg)
+# Best month
+best_month_index = np.argmax(sales)
+best_month = months[best_month_index]
 
-#Subject-wise Average
-subject_avg = np.mean(marks, axis=0)
-print(subject_avg)
+# Average sales
+average_sales = np.mean(sales)
 
-#Topper Student
-topper = np.argmax(student_avg)
-print("Top Student:", topper + 1)
+# Percentage change month-to-month
+pct_change = np.diff(sales) / sales[:-1] * 100
 
-#Failed Students (average < 50)
-failed = np.where(student_avg < 50)
-print("Failed Students:", failed[0] + 1)
+# Output
+print(sales)
+print("Best_month :", best_month)
+print("Average sales :", average_sales)
+print(pct_change)
